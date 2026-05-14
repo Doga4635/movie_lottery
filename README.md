@@ -1,73 +1,66 @@
-# React + TypeScript + Vite
+# Movie Lottery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React framework ile geliştirilmiş, LocalStorage entegrasyonlu izlemek istediğiniz filmler için CRUD uygulaması.
 
-Currently, two official plugins are available:
+## 🚀 Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- ✅ LocalStorage ile veri persist etme
+- ✅ Yeni film ekleme (Form)
+- ✅ Film silme
+- ✅ Film güncelleme
+- ✅ Filmleri filtreleme
+- ✅ TypeScript desteği
+- ✅ Netlify'a deploy edilebilir
 
-## React Compiler
+## 📦 Kurulum
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Bağımlılıkları yükle
+npm install
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Geliştirme sunucusunu başlat
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌐 Deploy (Netlify)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. GitHub'a push et
+2. Netlify'da "New site from Git" seç
+3. GitHub reposunu bağla
+4. Build komutu: `npm run build`
+5. Publish dizini: `build/client`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Veya Netlify CLI ile:
+
+```bash
+npm install -g netlify-cli
+netlify login
+netlify deploy --prod
 ```
+
+## 📁 Proje Yapısı
+
+```
+src/
+├── components/
+│   ├── FilmCard.tsx        # Film kartı
+│   ├── FilmForm.tsx        # Film ekleme formu
+│   └── FilmList.tsx        # Fİlmlerin liste görünümü
+│   └── FilterButtons.tsx   # Filtre butonlarının görünümü  ?
+├── interfaces/
+│   └── Film.ts             # Film objesi  ?
+├── pages/
+│   └── Home.tsx            # Ana sayfa
+├── utils/
+│   └── filmStorage.ts      # LocalStorage işlemleri
+├── App.css                 # Global stiller
+├── App.tsx
+├── index.css               # TailWindCSS
+└── main.tsx                # Uygulama kökü
+```
+
+## 🔧 Teknolojiler
+
+- **TypeScript** - Tip güvenliği
+- **Vite** - Build tool
+- **Netlify** - Hosting
