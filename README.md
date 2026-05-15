@@ -9,6 +9,7 @@ React framework ile geliştirilmiş, LocalStorage entegrasyonlu izlemek istediğ
 - ✅ Film silme
 - ✅ Film güncelleme
 - ✅ Filmleri filtreleme
+- ✅ Rastgele film önerme
 - ✅ TypeScript desteği
 - ✅ Netlify'a deploy edilebilir
 
@@ -24,19 +25,14 @@ npm run dev
 
 ## 🌐 Deploy (Netlify)
 
-1. GitHub'a push et
-2. Netlify'da "New site from Git" seç
-3. GitHub reposunu bağla
-4. Build komutu: `npm run build`
-5. Publish dizini: `build/client`
+1. GitHub reposunu indir.
+2. Netlify'da "Create New Project" bölümüne git.
+3. İndirdiğin repoyu buraya yükle.
+4. Deploy edilen sitenin linkine tıkla.
 
-Veya Netlify CLI ile:
+Veya Netlify ile önceden oluşturulmuş siteye git:
+https://loquacious-taffy-75bfde.netlify.app/
 
-```bash
-npm install -g netlify-cli
-netlify login
-netlify deploy --prod
-```
 
 ## 📁 Proje Yapısı
 
