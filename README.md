@@ -15,6 +15,9 @@ React framework ile geliştirilmiş, LocalStorage entegrasyonlu izlemek istediğ
 
 ## 📦 Kurulum
 
+Ön Gereksinimler <br>
+Sisteminizde Git ve Node.js'in yüklü olduğundan emin olun. Eğer yüklü değilse [Git](https://git-scm.com/install/) ve [Node.js](https://nodejs.org/en/download) Kurulum Rehberleri üzerinden kurulumları tamamlayabilirsiniz.
+
 ```bash
 # Projeyi klonlayın
 git clone https://github.com/Doga4635/movie_lottery
