@@ -16,7 +16,7 @@ React framework ile geliştirilmiş, LocalStorage entegrasyonlu izlemek istediğ
 ## 📦 Kurulum
 
 Ön Gereksinimler <br>
-Sisteminizde Git ve Node.js'in yüklü olduğundan emin olun. Eğer yüklü değilse [Git](https://git-scm.com/install/) ve [Node.js](https://nodejs.org/en/download) Kurulum Rehberleri üzerinden kurulumları tamamlayabilirsiniz.
+Sisteminizde Git ve Node.js'in yüklü olduğundan emin olun. Eğer yüklü değilse <a href="https://git-scm.com/install/" target="_blank">Git</a> ve <a href="https://nodejs.org/en/download" target="_blank">Node.js</a> Kurulum Rehberleri üzerinden kurulumları tamamlayabilirsiniz.
 
 ```bash
 # Projeyi klonlayın
