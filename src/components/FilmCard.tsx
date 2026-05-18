@@ -25,7 +25,7 @@ export const FilmCard: React.FC<FilmCardProps> = ({ film, onStatusChange, onEdit
             alt={film.title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          {/* Durum İkonu: Daha Şık Bir Cam Efekti */}
+          {/* Durum İkonu */}
           <div className={`absolute bottom-3 right-3 w-8 h-8 rounded-full flex items-center justify-center text-sm backdrop-blur-md border shadow-lg transition-colors ${
             film.status === 'watched' ? 'bg-emerald-500/30 border-emerald-500/50 text-emerald-300' : 'bg-sky-500/30 border-sky-500/50 text-sky-300'
           }`}>
@@ -33,7 +33,7 @@ export const FilmCard: React.FC<FilmCardProps> = ({ film, onStatusChange, onEdit
           </div>
         </div>
 
-        {/* ARKA YÜZ: Bilgiler (Modern Beyaz Tasarım) */}
+        {/* ARKA YÜZ: Bilgiler */}
         <div className="flip-face back bg-slate-600 rounded-xl flex flex-col shadow-[inset_0_0_50px_rgba(0,0,0,0.02)] border border-slate-200 overflow-hidden">
           
           {/* Üst Kısım: Başlık */}
@@ -43,7 +43,7 @@ export const FilmCard: React.FC<FilmCardProps> = ({ film, onStatusChange, onEdit
             </h3>
           </div>
           
-          {/* ORTA KISIM: Bilgiler (Yazılar Büyütüldü ve Ortalandı) */}
+          {/* ORTA KISIM: Bilgiler */}
           <div className="flex-1 flex flex-col justify-around py-1 md:py-2 px-3">
             <div className="flex flex-col items-center">
               <span className="text-[8px] md:text-[10px] text-slate-300 font-bold uppercase tracking-widest">TÜR</span>
@@ -70,7 +70,7 @@ export const FilmCard: React.FC<FilmCardProps> = ({ film, onStatusChange, onEdit
             </div>
           </div>
           
-          {/* ALT KISIM: Aksiyon Butonları (Daha Minimal ve Modern) */}
+          {/* ALT KISIM: Butonlar */}
           <div className="px-2 pb-2 md:px-4 md:pb-4 space-y-1 md:space-y-2" onClick={(e) => e.stopPropagation()}>
             
             <button

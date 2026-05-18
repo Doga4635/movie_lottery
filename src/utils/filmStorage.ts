@@ -3,7 +3,7 @@ import type { Film } from '../interfaces/Film';
 const STORAGE_KEY = 'films_watchlist';
 
 export const FilmStorage = {
-  // Tüm filmleri getir
+  // Tüm filmleri getirme
   getFilms: (): Film[] => {
     try {
       const data = localStorage.getItem(STORAGE_KEY);
@@ -14,7 +14,7 @@ export const FilmStorage = {
     }
   },
 
-  // Film ekle
+  // Film ekleme
   addFilm: (film: Film): void => {
     try {
       const films = FilmStorage.getFilms();
@@ -25,7 +25,7 @@ export const FilmStorage = {
     }
   },
 
-  // Film güncelle
+  // Film güncelleme
   updateFilm: (id: string, updatedFilm: Partial<Film>): void => {
     try {
       const films = FilmStorage.getFilms();
@@ -39,7 +39,7 @@ export const FilmStorage = {
     }
   },
 
-  // Film sil
+  // Film silme
   deleteFilm: (id: string): void => {
     try {
       const films = FilmStorage.getFilms();
@@ -50,7 +50,7 @@ export const FilmStorage = {
     }
   },
 
-  // Rastgele film seç
+  // Rastgele film seçme
   getRandomFilm: (): Film | null => {
     const films = FilmStorage.getFilms();
     if (films.length === 0) return null;

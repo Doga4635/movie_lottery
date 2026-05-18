@@ -14,7 +14,7 @@ export const Home: React.FC = () => {
   const [editingFilm, setEditingFilm] = useState<Film | null>(null);
   const [selectedRandomFilmId, setSelectedRandomFilmId] = useState<string | null>(null);
 
-  // Filmleri localStorage'dan yükle
+  // Filmleri localStorage'dan yükleme
   useEffect(() => {
     const loadedFilms = FilmStorage.getFilms();
     setFilms(loadedFilms);
@@ -22,7 +22,7 @@ export const Home: React.FC = () => {
 
   // Rastgele film seçme fonksiyonu
   const handleRandomSelect = () => {
-    // Önemli: Seçim yaparken seçili ID'yi değil, aktif filtredeki TÜM filmleri baz alıyoruz
+    // Seçim yaparken seçili ID'yi değil, watchlist teki tüm filmler baz alınıyor
     let watchListPool: Film[] = films.filter(f => f.status === 'watch-list');
     
     if (watchListPool.length > 0) {
@@ -34,9 +34,9 @@ export const Home: React.FC = () => {
     }
   };
 
-  // Filtrelenmiş filmleri getir
+  // Filtrelenmiş filmleri getirme
   const getFilteredFilms = (): Film[] => {
-    // Eğer rastgele bir film seçilmişse, sadece onu göster
+    // Eğer rastgele bir film seçilmişse, sadece onu göstermek için
     if (selectedRandomFilmId) {
       return films.filter(f => f.id === selectedRandomFilmId);
     }
@@ -109,7 +109,7 @@ export const Home: React.FC = () => {
       {/* Header */}
       <div className="relative z-10 pt-12 pb-8 px-4 border-b border-slate-800/50 backdrop-blur-md">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-8 flex flex-col items-center"> {/* flex-col ekledik */}
+          <div className="text-center mb-8 flex flex-col items-center">
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="text-5xl md:text-6xl">🎬</span>
               <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-violet-600 to-amber-400 bg-clip-text text-transparent">
@@ -139,13 +139,12 @@ export const Home: React.FC = () => {
 
           {/* Yeni Film Ekle Butonu */}
           {!showForm && (
-            <div className="flex flex-wrap justify-center gap-4 text-center"> 
-            {/* gap-4 (16px) veya gap-6 (24px) kullanabilirsin */}
+            <div className="flex flex-wrap justify-center gap-4 text-center">
             
             <button 
               className="group relative inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-blue-700 text-white font-semibold rounded-lg transition duration-300 shadow-lg hover:shadow-xl hover:shadow-violet-500/20 active:scale-95"
               onClick={() => {
-                // 1. Önce sayfayı kaydır
+                // Önce sayfayı kaydır
                 window.scrollTo({ top: 340, behavior: 'smooth' });
                 setTimeout(() => {
                   setShowForm(true);
@@ -198,7 +197,7 @@ export const Home: React.FC = () => {
             />
           </div>
 
-          {/* Film List or Empty State */}
+          {/* Film List ya da Empty State */}
           {filteredFilms.length > 0 ? (
             <FilmList
               films={filteredFilms}

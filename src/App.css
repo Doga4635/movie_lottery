@@ -1,4 +1,4 @@
-/* Global styles for the app */
+/* Uygulama için global stiller */
 html {
   scroll-behavior: smooth;
 }
@@ -14,12 +14,11 @@ body {
   background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 50%, #0f1419 100%);
 }
 
-/* Smooth animations */
+/* Yumuşak animasyon */
 * {
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Button styles */
 button {
   font-family: 'Inter', system-ui, sans-serif;
 }
@@ -43,7 +42,7 @@ button {
   background: rgba(167, 139, 250, 0.6);
 }
 
-/* Animations */
+/* Animasyonlar */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -115,7 +114,7 @@ button {
   animation: glow 2s infinite;
 }
 
-/* Film card hover effects */
+/* Film kart hover efektleri */
 .film-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -124,7 +123,7 @@ button {
   transform: translateY(-8px) scale(1.02);
 }
 
-/* Button hover effects */
+/* Buton hover efektleri */
 button:not(:disabled) {
   cursor: pointer;
 }
@@ -133,7 +132,6 @@ button:active {
   transform: scale(0.95);
 }
 
-/* Backdrop blur support */
 @supports (backdrop-filter: blur(1px)) {
   .backdrop-blur-sm {
     backdrop-filter: blur(4px);

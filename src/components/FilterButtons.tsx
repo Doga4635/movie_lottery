@@ -27,7 +27,6 @@ export const FilterButtons: React.FC<FilterButtonsProps> = ({
           <button
             key={btn.id}
             onClick={() => onFilterChange(btn.id)}
-            // Inline style kullanarak CSS dosyasını tamamen devre dışı bırakıyoruz
             style={{
               backgroundColor: isActive ? '#7410EC' : '#1e293b', // Aktifse Indigo, değilse Koyu Gri
               color: isActive ? 'white' : '#94a3b8',

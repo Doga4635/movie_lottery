@@ -31,7 +31,7 @@ npm run dev
 4. Deploy edilen sitenin linkine tıkla.
 
 Veya Netlify ile önceden oluşturulmuş siteye git:
-https://loquacious-taffy-75bfde.netlify.app/
+https://movielottery.netlify.app/
 
 
 ## 📁 Proje Yapısı
@@ -57,6 +57,6 @@ src/
 
 ## 🔧 Teknolojiler
 
-- **TypeScript** - Tip güvenliği
-- **Vite** - Build tool
+- **TypeScript** - Uygulamanın ana dili
+- **Vite** - Build aracı
 - **Netlify** - Hosting
