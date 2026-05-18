@@ -16,6 +16,10 @@ React framework ile geliştirilmiş, LocalStorage entegrasyonlu izlemek istediğ
 ## 📦 Kurulum
 
 ```bash
+# Projeyi klonlayın
+git clone https://github.com/Doga4635/movie_lottery
+cd movie_lottery
+
 # Bağımlılıkları yükle
 npm install
 
